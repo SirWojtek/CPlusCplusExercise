@@ -6,10 +6,34 @@ using namespace std;
 // maluj trojkat
 void trojkat(int wysokosc)
 {
-    // przykladowa petla for
-    for (int i = 0; i < wysokosc; i++)
+    int spacje;
+    int hashe;
+
+
+    if (wysokosc<=1)
+	{
+        cout << "Za mala wartosc wysokosci!";
+        return;
+    }
+
+	spacje  = wysokosc - 1;
+	hashe = 1;
+   	 for (int i = 0; i <wysokosc; i++)
     {
-        // bla
+        for (int j = 0; j<spacje; j++)
+        {
+            cout << " ";
+        }
+
+        for (int k=0; k <hashe; k++)
+        {
+            cout << "#";
+
+        }
+
+        hashe += 2;
+        spacje--;
+        cout << endl;
     }
 }
 
